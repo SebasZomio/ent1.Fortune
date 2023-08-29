@@ -1,0 +1,78 @@
+.container {
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.container_title {
+
+    text-shadow: 0.15em 0.15em #99bb0499;
+    font-size: 4em;
+    text-align: center;
+    animation: cambiaColor 3s infinite, cambiaShadow 3s infinite;
+    transition: text-shadow 0.5s ease;
+    
+}
+
+@keyframes cambiaColor {
+    0% {
+        color: blue;
+    }
+    33% {
+        color: red;
+    }
+    66% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.container_title:hover {
+    text-shadow: 0.25em 0.25em #99bb04;
+}
+
+.container_phrase {
+    width: 100%;
+    max-width: 30em;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1.5em 2em;
+    border-radius: 0.7em;
+    font-size: 1.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.quote-text {
+    line-height: 1.4;
+}
+
+.quote-author {
+    font-weight: bold;
+}
+
+.container_btn {
+    padding: 0.8em 1.2em;
+    border-radius: 0.7em;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: opacity 200ms ease,
+                transform 200ms ease,
+                box-shadow 200ms ease;
+}
+
+.container_btn:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 0.8em #0005;
+}
